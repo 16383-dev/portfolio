@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activities - Portfolio</title>
+    <title>My Skills - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,73 +12,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* 🎨 โค้ดตกแต่งพิเศษสำหรับการ์ดกิจกรรมแบบมีรูปภาพ */
-        .activity-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
+        /* 🎨 โค้ดตกแต่งพิเศษสำหรับหน้าทักษะและความสามารถ */
+        .skills-container {
+            max-width: 800px;
+            margin: 30px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
-        
-        .activity-card {
-            background: #ffffff;
-            border-radius: 16px;
-            overflow: hidden; /* ทำให้มุมรูปภาพโค้งมนตามกล่อง */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            border: 1px solid #f0f0f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        .skills-section-title {
+            font-size: 1.4rem;
+            color: #444;
+            margin-bottom: 15px;
             text-align: left;
-        }
-        
-        .activity-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        }
-        
-        /* ส่วนแสดงรูปภาพกิจกรรม */
-        .activity-img-wrapper {
-            width: 100%;
-            height: 200px;
-            background-color: #f8fafc; /* สีพื้นหลังรองรับระหว่างรูปโหลด */
-            overflow: hidden;
-        }
-        
-        .activity-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* จัดการรูปภาพให้พอดีกล่อง ไม่บดบังหรือยืดเบี้ยว */
-            transition: transform 0.5s ease;
-        }
-        
-        .activity-card:hover .activity-img-wrapper img {
-            transform: scale(1.05); /* เอฟเฟกต์ซูมรูปภาพเบาๆ ตอนเอาเมาส์ไปชี้ */
-        }
-        
-        /* ส่วนรายละเอียดข้อความใต้ภาพ */
-        .activity-info {
-            padding: 20px;
-        }
-        
-        .activity-date {
-            font-size: 0.8rem;
-            color: #ff85a2; /* สีชมพูพาสเทลน่ารักๆ */
+            border-bottom: 2px solid #ffe4e6;
+            padding-bottom: 5px;
             font-weight: 500;
-            margin-bottom: 5px;
-            display: inline-block;
         }
-        
-        .activity-info h3 {
-            margin: 0 0 8px 0;
-            font-size: 1.2rem;
-            color: #333;
-            font-weight: 600;
+
+        /* จัดวางกล่องข้อความแบบพรีเมียมเรียงกัน */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
         }
-        
-        .activity-info p {
-            margin: 0;
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.6;
+
+        /* กล่องข้อความสกิลแบบคลีน มีสติกเกอร์ไอคอนด้านหน้าข้อความ */
+        .skill-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 15px;
+            font-weight: 500;
+            color: #4a5568;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* เว้นระยะห่างระหว่างสติกเกอร์กับข้อความ */
+        }
+
+        .skill-box:hover {
+            transform: translateY(-3px);
+            border-color: #ffe4e6;
+            background: #fffafb;
+            color: #f43f5e;
+            box-shadow: 0 6px 15px rgba(244, 63, 94, 0.06);
         }
     </style>
 </head>
@@ -92,59 +73,46 @@
 <nav class="navbar">
     <a href="index.html">🏠 Home</a>
     <a href="about.html">👩 About</a>
-    <a href="projects.html" class="active">💻 Projects</a>
-    <a href="skills.html">⭐ Skills</a>
+    <a href="projects.html">💻 Projects</a>
+    <a href="skills.html" class="active">⭐ Skills</a>
     <a href="contact.html">📞 Contact</a>
 </nav>
 
 <section style="text-align: center;">
-    <h2>🌷 My Activities</h2>
-    <p>Here are some of my memorable school activities and participations ✨</p>
+    <h2>⭐ My Skills & Talents</h2>
+    <p>Here are the technologies, tools, and special talents I have learned and developed ✨</p>
     
-    <div class="activity-grid">
-        <div class="activity-card">
-            <div class="activity-img-wrapper">
-                <img src="images/activity1.jpg" alt="Activity 1">
-            </div>
-            <div class="activity-content-box activity-info">
-                <span class="activity-date">Activity 01</span>
-                <h3>School Event Header</h3>
-                <p>Describe the first activity here. What did your friend do? What skills did she learn from this event?</p>
-            </div>
-        </div>
-
-        <div class="activity-card">
-            <div class="activity-img-wrapper">
-                <img src="images/activity2.jpg" alt="Activity 2">
-            </div>
-            <div class="activity-content-box activity-info">
-                <span class="activity-date">Activity 02</span>
-                <h3>Academic Competition</h3>
-                <p>Describe the second activity here. For example, science day, art contest, or presentation projects.</p>
+    <div class="skills-container">
+        
+        <div>
+            <h3 class="skills-section-title">Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-box"><span>💻</span> HTML</div>
+                <div class="skill-box"><span>🎨</span> CSS</div>
+                <div class="skill-box"><span>🚀</span> JavaScript</div>
+                <div class="skill-box"><span>🐙</span> GitHub</div>
             </div>
         </div>
 
-        <div class="activity-card">
-            <div class="activity-img-wrapper">
-                <img src="images/activity3.jpg" alt="Activity 3">
-            </div>
-            <div class="activity-content-box activity-info">
-                <span class="activity-date">Activity 03</span>
-                <h3>Volunteer Work</h3>
-                <p>Describe the third activity here. Community service, classroom helper, or student council activities.</p>
+        <div>
+            <h3 class="skills-section-title">Tools & Soft Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-box"><span>📊</span> Canva</div>
+                <div class="skill-box"><span>👥</span> Teamwork</div>
+                <div class="skill-box"><span>💡</span> Creativity</div>
+                <div class="skill-box"><span>💬</span> Communication</div>
             </div>
         </div>
 
-        <div class="activity-card">
-            <div class="activity-img-wrapper">
-                <img src="images/activity4.jpg" alt="Activity 4">
-            </div>
-            <div class="activity-content-box activity-info">
-                <span class="activity-date">Activity 04</span>
-                <h3>Group Project</h3>
-                <p>Describe the fourth activity here. Teamwork, technology exhibition, or any club activity your friend enjoyed.</p>
+        <div>
+            <h3 class="skills-section-title">Special Talents</h3>
+            <div class="skills-grid">
+                <div class="skill-box"><span>🎸</span> Playing Guitar</div>
+                <div class="skill-box"><span>🍳</span> Cooking</div>
+                <div class="skill-box"><span>💃</span> Dancing</div>
             </div>
         </div>
+
     </div>
 </section>
 
