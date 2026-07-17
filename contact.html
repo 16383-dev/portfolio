@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 450px;
+            margin: 30px auto 0 auto;
+        }
+        .contact-box {
+            background: #ffffff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            text-align: left;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        .contact-box:hover {
+            transform: translateX(5px);
+            border-color: #ffe4e6;
+            background: #fffafb;
+        }
+        .contact-icon {
+            font-size: 1.6rem;
+            margin-right: 18px;
+        }
+        .contact-details h4 {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 300;
+        }
+        .contact-details p {
+            margin: 2px 0 0 0;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #444;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌸 My Portfolio 🌸</h1>
+</header>
+
+<nav class="navbar">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html">👩 About</a>
+    <a href="projects.html">💻 Projects</a>
+    <a href="skills.html">⭐ Skills</a>
+    <a href="contact.html" class="active">📞 Contact</a>
+</nav>
+
+<section style="text-align: center;">
+    <h2>📞 Contact Me</h2>
+    <p>Feel free to reach out! You can connect with me through the following channels ✨</p>
+    
+    <div class="contact-list">
+       
+        <a href="tel:0981234567" class="contact-box">
+            <span class="contact-icon">📞</span>
+            <div class="contact-details">
+                <h4>Phone Number</h4>
+                <p>098-123-4567</p>
+            </div>
+        </a>
+
+        <a href="mailto:suphattra.kh@gmail.com" class="contact-box">
+            <span class="contact-icon">✉️</span>
+            <div class="contact-details">
+                <h4>Email Address</h4>
+                <p>suphattra.kh@gmail.com</p>
+            </div>
+        </a>
+
+        <a href="https://instagram.com/your_ig" target="_blank" class="contact-box">
+            <span class="contact-icon">📸</span>
+            <div class="contact-details">
+                <h4>Instagram</h4>
+                <p>@suphattra.space</p>
+            </div>
+        </a>
+
+
+        <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-box">
+            <span class="contact-icon">💬</span>
+            <div class="contact-details">
+                <h4>Line ID</h4>
+                <p>suphattra_line</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+<footer>
+    Made with 🤍 by Suphattra
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
 
